@@ -116,7 +116,7 @@ function! fern_preview#half_up() abort
 endfunction
 
 function! fern_preview#width_default_func() abort
-  let width = float2nr(&columns * 0.8)
+  let width = float2nr((&columns - g:fern#drawer_width) * 0.8)
   return width
 endfunction
 
@@ -126,7 +126,7 @@ function! fern_preview#height_default_func() abort
 endfunction
 
 function! fern_preview#left_default_func() abort
-  let left = (&columns - call(g:fern_preview_window_calculator.width, [])) / 2
+  let left = g:fern#drawer_width
   return left
 endfunction
 
