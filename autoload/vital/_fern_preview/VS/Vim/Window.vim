@@ -57,7 +57,7 @@ else
       let l:info = popup_getpos(a:winid)
       return {
       \   'width': l:info.width,
-      \   'height': l:info.height,
+      \   'height': l:info.height - 2,
       \   'topline': l:info.firstline
       \ }
     endif
